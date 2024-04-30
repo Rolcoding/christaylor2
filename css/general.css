@@ -90,7 +90,7 @@ html {
 }
 
 body {
-  font-family: 'EXO', 'RUBIK', sans-serif;
+  font-family: 'Exo', 'Rubik', sans-serif;
   line-height: 1;
   font-weight: 400;
   background-color: rgba(69, 69, 69, 0.805);
@@ -229,6 +229,7 @@ body {
 }
 
 .btn-1 {
+  font-family: inherit;
   border-radius: 11px;
   padding: 1.2rem 1.6rem;
   border: none;
