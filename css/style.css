@@ -827,6 +827,7 @@ form .textarea-field .error-txt {
 .gdpr-box--2 .error-txt {
   display: none;
   font-size: 1.5rem;
+  line-height: 1.5;
   color: red;
   text-align: left;
   margin: 1rem 0 1rem 0;
