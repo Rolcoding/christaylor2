@@ -211,7 +211,7 @@ function checkInputs() {
       }
     });
     errorCheck();
-    // TxtCheckbox.addEventListener('checked', errorCheck());
+    // TxtCheckbox.addEventListener('click', errorCheck());
   }
 }
 
@@ -264,9 +264,9 @@ form.addEventListener('submit', e => {
     !mess.classList.contains('error') &&
     checkbox.checked
   ) {
-    // sendEmail();
-    console.log('OK');
-    // form.reset();
+    sendEmail();
+    // console.log('OK');
+    form.reset();
     return false;
   }
 });
