@@ -111,7 +111,7 @@ const phone = document.getElementById('phone');
 const billName = document.getElementById('billname');
 const billAddress = document.getElementById('billaddress');
 const mess = document.getElementById('message');
-const checkChk = document.getElementById('check');
+let checkbox = document.querySelector('#terms');
 
 function sendEmail() {
   const bodyMessage = `Teljes név: ${fullName.value}<br> Születési név: ${birthName.value}<br> Születési hely: ${birthPlace.value}<br> Születési dátum: ${birthDate.value}<br> Anyja neve: ${motherName.value}<br> Email: ${email.value}<br> Telefonszám: ${phone.value}<br> Számlázási név: ${billName.value}<br> Számlázási cím: ${billAddress.value}<br> Üzenet: ${mess.value}`;
@@ -209,6 +209,8 @@ function checkInputs() {
         item.parentElement.classList.add('error');
       }
     });
+
+    errorCheck();
   }
 }
 
@@ -231,6 +233,20 @@ function checkEmail() {
   }
 }
 
+function errorCheck() {
+  const errorTxtCheckbox = document.querySelector('.error-txt.check');
+
+  if (!checkbox.checked) {
+    terms.classList.add('error');
+    terms.parentElement.classList.add('error');
+  }
+
+  if (checkbox.checked) {
+    terms.classList.remove('error');
+    terms.parentElement.classList.remove('error');
+  }
+}
+
 // Form check for errors
 form.addEventListener('submit', e => {
   e.preventDefault();
@@ -246,11 +262,12 @@ form.addEventListener('submit', e => {
     !phone.classList.contains('error') &&
     !billName.classList.contains('error') &&
     !billAddress.classList.contains('error') &&
-    !mess.classList.contains('error')
+    !mess.classList.contains('error') &&
+    checkbox.checked
   ) {
     // sendEmail();
     console.log('OK');
-    form.reset();
+    // form.reset();
     return false;
   }
 });
