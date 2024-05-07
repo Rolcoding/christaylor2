@@ -185,6 +185,7 @@ function sendEmail() {
 
 function checkInputs() {
   const items = document.querySelectorAll('.item');
+  const TxtCheckbox = document.querySelector('#terms');
 
   for (const item of items) {
     if (item.value == '') {
@@ -209,8 +210,8 @@ function checkInputs() {
         item.parentElement.classList.add('error');
       }
     });
-
     errorCheck();
+    // TxtCheckbox.addEventListener('checked', errorCheck());
   }
 }
 
@@ -239,9 +240,7 @@ function errorCheck() {
   if (!checkbox.checked) {
     terms.classList.add('error');
     terms.parentElement.classList.add('error');
-  }
-
-  if (checkbox.checked) {
+  } else {
     terms.classList.remove('error');
     terms.parentElement.classList.remove('error');
   }
