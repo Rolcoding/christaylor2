@@ -638,10 +638,6 @@ header {
   text-align: center;
 }
 
-.actually-card li {
-  margin-left: 0;
-}
-
 .actually-card ul li {
   padding: 0.6rem;
 }
@@ -650,6 +646,7 @@ header {
   list-style: none;
   background-color: #f8e3de;
   border-radius: 11px;
+  margin-left: 0;
 }
 
 .section-course form {
